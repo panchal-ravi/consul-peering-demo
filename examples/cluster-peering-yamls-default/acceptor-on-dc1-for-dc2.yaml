@@ -1,0 +1,13 @@
+apiVersion: consul.hashicorp.com/v1alpha1
+kind: PeeringAcceptor
+metadata:
+  # name: dc1
+  name: dc2-default
+  annotations:
+    consul.hashicorp.com/peering-version: "1" ## The peering version you want to set, must be in quotes
+spec:
+  peer:
+    secret:
+      name: "peering-token-dc1-default-dc2-default"
+      key: "data"
+      backend: "kubernetes"

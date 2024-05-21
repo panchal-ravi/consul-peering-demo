@@ -1,0 +1,7 @@
+.envrc
+.terraform
+terraform.tfstate*
+*kubeconfig*
+.terraform*
+*.DS_Store
+*.tmp

@@ -1,0 +1,8 @@
+aws_region                              = "ap-southeast-1"
+owner                                   = "rp"
+aws_key_pair_key_name                   = "ssh-key"
+deployment_name                         = "rp-cpeer"
+consul_version                          = "1.18.2-ent"
+consul_helm_chart_version               = "1.4.1"
+aws_eks_self_managed_node_instance_type = "t3.medium"
+aws_eks_cluster_version                 = "1.28"

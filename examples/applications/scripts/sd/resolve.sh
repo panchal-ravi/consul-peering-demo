@@ -1,0 +1,1 @@
+kubectl -n utils exec -i $(kubectl get po -n utils -o name --context $S1) --context $S1 -- dig @$(kubectl get svc -n consul consul-dns -ojson --context $S1 | jq .spec.clusterIP -r) frontend.service.consul +short
