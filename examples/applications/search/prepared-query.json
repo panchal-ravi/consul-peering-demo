@@ -1,0 +1,18 @@
+{
+    "Name": "product",
+    "Token": "",
+    "Service": {
+      "Service": "product",
+      "Failover": {
+        "Targets": [{
+            "Peer": "dc2-default",
+            "Partition": "default",
+            "Namespace": "default"
+        }]
+      }
+    },
+    "DNS": {
+      "TTL": "10s"
+    }
+  }
+  

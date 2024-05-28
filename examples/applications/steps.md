@@ -103,16 +103,16 @@ k -n utils create deploy multitool --image=praqma/network-multitool --context $S
 ### Run Search
 ./scripts/run-search.sh
 
----------------------------------------------------------------------------------------------------
+-------------------   --------------------------------------------------------------------------------
 ### Delete All
 ```sh
 k get servicerouters.consul.hashicorp.com -oname --context $S2 | xargs -I{} kubectl delete {} --context $S1
 k get servicesplitters.consul.hashicorp.com -oname --context $S2 | xargs -I{} kubectl delete {} --context $S1
 k get serviceresolvers.consul.hashicorp.com -oname --context $S2 | xargs -I{} kubectl delete {} --context $S1
-k get proxydefaults.consul.hashicorp.com -oname --context $S2 | xargs -I{} kubectl delete {} --context $S2
-k get proxydefaults.consul.hashicorp.com -oname --context $S1 | xargs -I{} kubectl delete {} --context $S1
 k get service -oname --context $S2 | grep -v kubernetes | xargs -I{} kubectl delete {} --context $S2
 k get deploy -oname --context $S2 | xargs -I{} kubectl delete {} --context $S2
 k get service -oname --context $S1 | grep -v kubernetes | xargs -I{} kubectl delete {} --context $S1
 k get deploy -oname --context $S1 | xargs -I{} kubectl delete {} --context $S1
+k get proxydefaults.consul.hashicorp.com -oname --context $S2 | xargs -I{} kubectl delete {} --context $S2
+k get proxydefaults.consul.hashicorp.com -oname --context $S1 | xargs -I{} kubectl delete {} --context $S1
 ```

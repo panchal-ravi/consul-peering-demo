@@ -1,0 +1,12 @@
+{
+    "Name": "product",
+    "Token": "",
+    "Service": {
+      "Service": "product",
+      "SamenessGroup": "default"
+    },
+    "DNS": {
+      "TTL": "10s"
+    }
+  }
+  

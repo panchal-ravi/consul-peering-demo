@@ -106,11 +106,11 @@ variable "consul_serf_lan_port" {
   default     = 9301
 }
 
-variable "ami_fake_service" {
-  description = "AMI of fake-service"
-  type        = string
-  default     = "ami-0f8367177e942cad5"
-}
+# variable "ami_fake_service" {
+#   description = "AMI of fake-service"
+#   type        = string
+#   default     = "ami-0f8367177e942cad5"
+# }
 
 variable "aws_instance_type" {
   default = "t3.micro"
